@@ -47,7 +47,7 @@ func (m *Map) Get(s string) string {
 		m.c = nil
 	}
 	if m.c == nil {
-		m.c = make(map[string]string)
+		m.c = make(map[string]string, m.size)
 	}
 	m.c[s] = s
 	return m.c[s]
